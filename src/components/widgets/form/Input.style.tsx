@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 const Input = styled.input`
   
-`
-
-const Label = styled.label`
-  
-`
+  `
 
 const LabelTitle = styled.span`
   
-`
+  `
 
+  const Label = styled.label<{isError: boolean}>`
+  
+  `
+  
 export {Input,Label,LabelTitle}
