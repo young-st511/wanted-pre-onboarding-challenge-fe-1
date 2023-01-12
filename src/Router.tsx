@@ -13,11 +13,11 @@ function Router() {
       path: "/",
       element: <Root />,
       children: [
-        { path: "signUp", element: <SignUp /> },
         { path: "logIn", element: <LogIn /> },
         { path: "todos", element: <Todos />, children: [] },
       ],
     },
+    { path: "signUp", element: <SignUp /> },
   ]);
 
   return (
