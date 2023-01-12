@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-const Input = styled.input`
+const Label = styled.label<{isError: boolean}>`
   
 `
 
-const Label = styled.label`
+const Input = styled.input`
   
 `
 
