@@ -21,4 +21,22 @@ const Form = styled.div`
   gap: 1rem;
 `;
 
-export { Wrapper, Title, Form };
+const Submit = styled.button`
+  padding: 0.8rem 1.6rem;
+  
+  background-color: ${({ theme: { color } }) => color.main};
+  border-radius: 1rem;
+  
+  font-size:2rem;
+  font-weight: 700;
+  color: ${({ theme: { color } }) => color.white};
+
+  &:hover {
+    ${({theme})=>theme.shadow.light};
+    scale: 1.01;
+
+    transition: all 0.2s ease-in-out;
+  }
+`;
+
+export { Wrapper, Title, Form, Submit };
