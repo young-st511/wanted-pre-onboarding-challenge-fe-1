@@ -1,9 +1,3 @@
-type Props = {}
+import SignUp from "./SignUp.container";
 
-function SignUp({}: Props) {
-  return (
-    <div>SignUp</div>
-  )
-}
-
-export default SignUp
+export default SignUp;

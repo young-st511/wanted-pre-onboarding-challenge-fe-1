@@ -1,4 +1,4 @@
-import { DefaultTheme } from "styled-components";
+import { css, DefaultTheme } from "styled-components";
 
 const mainTheme: DefaultTheme = {
   color: {
@@ -9,6 +9,11 @@ const mainTheme: DefaultTheme = {
     redPoint: "#FF4926",
   },
   size: {
+    width: css`
+      width: 80vw;
+      min-width: 320px;
+      max-width: 800px;
+    `.join("\n"),
     navHeight: "6rem",
     radius: "1.6rem",
   },
@@ -27,6 +32,8 @@ declare module "styled-components" {
       redPoint: string;
     };
     size: {
+      /** width, max-width, min-width */
+      width: string;
       navHeight: string;
       radius: string;
     };
