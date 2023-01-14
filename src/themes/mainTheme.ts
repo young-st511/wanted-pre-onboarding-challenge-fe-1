@@ -2,7 +2,8 @@ import { css, DefaultTheme } from "styled-components";
 
 const mainTheme: DefaultTheme = {
   color: {
-    main: "#C9AFFE",
+    main: "#A77CFD",
+    sub: "#D3BEFE",
     black: "#000000",
     white: "#ffffff",
     bgColor: "#FDFCFF",
@@ -26,6 +27,7 @@ declare module "styled-components" {
   export interface DefaultTheme {
     color: {
       main: string;
+      sub: string;
       black: string;
       white: string;
       bgColor: string;
