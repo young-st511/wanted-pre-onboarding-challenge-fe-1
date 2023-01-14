@@ -20,7 +20,6 @@ interface FormPresenter<TForm extends FieldValues> {
   formState: UseFormStateReturn<TForm>;
   onSubmit: SubmitHandler<TForm>;
   handleSubmit: UseFormHandleSubmit<TForm>;
-  validations?: FormValidations<TForm>;
 }
 
 export type { FormPresenter, FormValidations };

@@ -25,13 +25,18 @@ function FormInput<TForm extends FieldValues>({
   isError,
   register,
   options,
+  autoComplete = "off",
   ...rest
 }: Props<TForm>) {
   return (
     <S.Label isError={isError}>
       <S.LabelTitle>{label}</S.LabelTitle>
-      <S.Input {...register(name, options)} {...rest} />
-      <S.Error>{error}</S.Error>
+      <S.Input
+        {...register(name, options)}
+        {...rest}
+        autoComplete={autoComplete}
+      />
+      {error && <S.Error>{error}</S.Error>}
     </S.Label>
   );
 }

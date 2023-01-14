@@ -49,6 +49,11 @@ const Error = styled.p`
   font-size: 1.4rem;
   font-weight: 500;
   color: ${({ theme }) => theme.color.redPoint};
+
+  &::before {
+    display: inline;
+    content: "⚠ ";
+  }
 `;
 
 export { Input, Label, LabelTitle, Error };

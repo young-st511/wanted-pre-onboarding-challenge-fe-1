@@ -16,16 +16,19 @@ const Title = styled.h1`
   color: ${({ theme: { color } }) => color.black};
 `;
 
-const Form = styled.div`
+const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2.4rem;
 
+  margin: 2.4rem 0;
+  
   width: 80%;
   min-width: 310px;
 `;
 
 const Submit = styled.button`
+  margin-top: 1.6rem;
   padding: 0.8rem 1.6rem;
   
   background-color: ${({ theme: { color } }) => color.main};

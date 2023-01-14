@@ -1,12 +1,12 @@
 export const enum SignUpApiUrl {
   /** POST: 회원가입 */
-  SIGN_UP = '/users/create',
+  SIGN_UP = "/users/create",
 }
 
 export interface SignUpRequest {
   email: string;
   password: string;
-  passwordConfirm: string;
+  passwordConfirm?: string;
 }
 
 export interface SignUpResponse {
