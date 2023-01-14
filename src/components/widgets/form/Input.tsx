@@ -14,12 +14,14 @@ interface Props<TForm extends FieldValues>
   name: FieldPath<TForm>;
   register: UseFormRegister<TForm>;
   isError: boolean;
+  error?: string;
   options?: RegisterOptions<TForm>;
 }
 
 function FormInput<TForm extends FieldValues>({
   label,
   name,
+  error,
   isError,
   register,
   options,
@@ -29,6 +31,7 @@ function FormInput<TForm extends FieldValues>({
     <S.Label isError={isError}>
       <S.LabelTitle>{label}</S.LabelTitle>
       <S.Input {...register(name, options)} {...rest} />
+      <S.Error>{error}</S.Error>
     </S.Label>
   );
 }

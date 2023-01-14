@@ -12,6 +12,7 @@ const Title = styled.h1`
   margin-bottom: 2rem;
 
   font-size: 2.4rem;
+  line-height: 1.2;
   color: ${({ theme: { color } }) => color.black};
 `;
 
@@ -19,6 +20,9 @@ const Form = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  width: 80%;
+  min-width: 310px;
 `;
 
 const Submit = styled.button`

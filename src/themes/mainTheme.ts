@@ -8,6 +8,10 @@ const mainTheme: DefaultTheme = {
     white: "#ffffff",
     bgColor: "#FDFCFF",
     redPoint: "#FF4926",
+    gray1: "#595959",
+    gray2: "#B6B6B6",
+    gray3: "#E6E6E6",
+    gray4: "#F6F6F6",
   },
   size: {
     width: css`
@@ -32,6 +36,10 @@ declare module "styled-components" {
       white: string;
       bgColor: string;
       redPoint: string;
+      gray1: string;
+      gray2: string;
+      gray3: string;
+      gray4: string;
     };
     size: {
       /** width, max-width, min-width */
