@@ -6,6 +6,7 @@ export const enum SignUpApiUrl {
 export interface SignUpRequest {
   email: string;
   password: string;
+  passwordConfirm: string;
 }
 
 export interface SignUpResponse {
