@@ -1,21 +1,21 @@
 import { useMutation, useQueryClient } from "react-query";
-import { updateTodo } from "../../../apis/todos/todosAPI";
-import { UpdateTodoRequest } from "../../../apis/todos/todosAPI.type";
+import { deleteTodo as deleteTodoRequest } from "../../../apis/todos/todosAPI";
 import { TodoType } from "../../../types/todo/todo.type";
 import { TodoKeys } from "../keys/TodoKeys";
 
-export function useTodoEdit(todoId: string) {
+export function useTodoDelete(todoId: string) {
   const queryClient = useQueryClient();
-  const update = (data: UpdateTodoRequest) => updateTodo(todoId, data);
-  const mutation = useMutation(update, {
-    onSuccess: (todo) => {
+
+  const deleteTodo = () => deleteTodoRequest(todoId);
+  const mutation = useMutation(deleteTodo, {
+    onSuccess: () => {
       queryClient.setQueryData<TodoType[]>(TodoKeys.Todos, (todos) => {
         if (!todos) {
-          return [todo];
+          return [];
         }
 
         const index = todos.findIndex((todo) => todo.id === todoId);
-        todos[index] = todo;
+        todos.splice(index, 1);
 
         return [...todos];
       });

@@ -44,6 +44,7 @@ export const Input = styled.input`
 
   box-shadow: inset 0 0 0.4rem rgba(100, 100, 100, 0.2);
   &:focus {
+    box-shadow: inset 0 0 0.4rem rgba(100, 100, 100, 0.4);
   }
 `;
 
