@@ -16,9 +16,11 @@ function TodoEditerPresenter({
   return (
     <S.Wrapper>
       <S.Form onSubmit={handleSubmit(onSubmit)}>
-        <S.Input {...register("title")} />
-        <S.Input {...register("content")} />
-        <S.Submit>{submitText}</S.Submit>
+        <S.FormHeader>
+          <S.Input {...register("title")} />
+          <S.Submit>{submitText}</S.Submit>
+        </S.FormHeader>
+        <S.ContentInput {...register("content")} />
       </S.Form>
     </S.Wrapper>
   );

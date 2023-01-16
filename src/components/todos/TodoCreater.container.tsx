@@ -13,7 +13,7 @@ function TodoCreaterContainer() {
 
   const props = { handleSubmit, formState, register, onSubmit };
 
-  return <TodoEditerPresenter {...props} submitText={"수정"} />;
+  return <TodoEditerPresenter {...props} submitText={"추가"} />;
 }
 
 export default TodoCreaterContainer;
