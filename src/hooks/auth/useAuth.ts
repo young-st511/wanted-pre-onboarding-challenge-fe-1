@@ -1,7 +1,14 @@
+import { AuthContext } from "../../components/contexts/AuthContext";
+import { useContext } from "react";
+
 function useAuth() {
-  
-  
-  return false;
+  const ctx = useContext(AuthContext);
+
+  if (!ctx) {
+    throw new Error("Auth Context Error. Check Context Provider");
+  }
+
+  return ctx;
 }
 
-export default useAuth
+export default useAuth;

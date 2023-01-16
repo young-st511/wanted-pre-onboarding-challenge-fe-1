@@ -1,7 +1,9 @@
-export const enum SignUpApiUrl {
+import { APIDomains } from "../apiDomains";
+
+export const SignUpApiUrl = {
   /** POST: 회원가입 */
-  SIGN_UP = "/users/create",
-}
+  SIGN_UP: APIDomains.User + "/create",
+} as const;
 
 export interface SignUpRequest {
   email: string;

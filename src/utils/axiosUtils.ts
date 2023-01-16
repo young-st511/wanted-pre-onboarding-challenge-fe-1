@@ -1,5 +1,5 @@
 import axios, { AxiosError } from "axios";
-import { API_BASE_URL } from "data/API_ENV";
+import { API_BASE_URL } from "../data/API_ENV";
 
 export function setAxiosDefaultsConfig() {
   axios.defaults.baseURL = API_BASE_URL;

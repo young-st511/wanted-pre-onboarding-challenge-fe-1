@@ -1,22 +1,29 @@
-import axios from "axios";
+import { AuthKeys } from "../hooks/queries/keys/AuthKeys";
 
 export type JWToken = string;
 
-export function getAccessToken(): JWToken {
-  const token = axios.defaults.headers.common["Authorization"];
+export function checkTokenValidity(): boolean {
+  const token = getAccessToken();
+
   if (!token) {
-    return "";
+    return false;
   }
 
-  return token.toString().split(" ")[1];
+  return true;
 }
 
-export function getTokenExpirationDate(token: JWToken) {
+export function setAccessToken(token: JWToken) {
+  localStorage.setItem(AuthKeys.AccessToken, token);
+}
+
+export function getAccessToken(): JWToken {
+  // const token = axios.defaults.headers.common["Authorization"];
+  const token = localStorage.getItem(AuthKeys.AccessToken);
+
   if (!token) {
     return "";
   }
-  const info = JSON.parse(window.atob(token.split(".")[1]));
-  const expDate = info.exp as number;
 
-  return new Date(expDate * 1000);
+  // return token.toString().split(" ")[1];
+  return token;
 }
