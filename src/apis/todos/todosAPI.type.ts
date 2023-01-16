@@ -1,3 +1,4 @@
+import { TodoType } from "../../types/todo/todo.type";
 import { APIDomains } from "../apiDomains";
 
 export const TodosApiUrl = {
@@ -13,13 +14,7 @@ export const TodosApiUrl = {
   DELETE_TODO: APIDomains.Todo + "/",
 } as const;
 
-interface Todo {
-  title: string;
-  content: string;
-  id: string;
-  createdAt: Date;
-  updatedAt: Date;
-}
+type Todo = TodoType;
 
 export interface GetTodosResponse {
   data: Todo[];
