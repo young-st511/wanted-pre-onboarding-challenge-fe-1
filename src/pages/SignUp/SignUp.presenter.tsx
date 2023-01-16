@@ -1,7 +1,7 @@
 import { SignUpRequest } from "../../apis/signUp/signUpAPI.type";
 import FormInput from "../../components/widgets/form/Input";
 import * as S from "./SignUp.style";
-import { FormPresenter } from "../../types/Form/FormPresenter.type";
+import { FormPresenter } from "../../types/form/FormPresenter.type";
 
 type Props = FormPresenter<SignUpRequest>;
 

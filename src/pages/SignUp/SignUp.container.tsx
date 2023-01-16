@@ -1,6 +1,6 @@
 import { SignUpRequest } from "../../apis/signUp/signUpAPI.type";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { FormValidations } from "../../types/Form/FormPresenter.type";
+import { FormValidations } from "../../types/form/FormPresenter.type";
 import SignUp from "./SignUp.presenter";
 import { useEffect } from "react";
 import { setAxiosDefaultsConfig } from "../../utils/axiosUtils";
