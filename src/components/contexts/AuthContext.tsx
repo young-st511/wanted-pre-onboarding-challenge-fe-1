@@ -37,6 +37,7 @@ function AuthProvider({ children }: PropsWithChildren) {
 
   const signOut = () => {
     postSignOut();
+    setUser(false);
   };
 
   return (
