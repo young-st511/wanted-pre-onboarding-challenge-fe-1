@@ -27,3 +27,7 @@ export function getAccessToken(): JWToken {
   // return token.toString().split(" ")[1];
   return token;
 }
+
+export function removeAccessToken() {
+  localStorage.removeItem(AuthKeys.AccessToken);
+}
