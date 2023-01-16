@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { SignInRequest } from "../../apis/auth/authAPI.type";
 import FormInput from "../../components/widgets/form/Input";
-import { FormPresenter } from "../../types/Form/FormPresenter.type";
+import { FormPresenter } from "../../types/form/FormPresenter.type";
 import * as S from "./LogIn.style";
 
 type Props = FormPresenter<SignInRequest>;

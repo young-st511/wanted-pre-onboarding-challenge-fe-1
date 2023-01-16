@@ -1,8 +1,14 @@
-import { postSignIn, postSignOut } from "../../apis/auth/authAPI";
+import { postSignIn } from "../../apis/auth/authAPI";
 import { SignInRequest, SignInResponse } from "../../apis/auth/authAPI.type";
 import { AxiosResponse } from "axios";
 import { createContext, PropsWithChildren, useRef, useState } from "react";
-import { checkTokenValidity, setAccessToken } from "../../utils/tokenUtils";
+import {
+  checkTokenValidity,
+  getAccessToken,
+  removeAccessToken,
+  setAccessToken,
+} from "../../utils/tokenUtils";
+import { removeAxiosToken, setAxiosToken } from "../../utils/axiosUtils";
 
 interface AuthCtxType {
   user: boolean;
@@ -19,12 +25,16 @@ function AuthProvider({ children }: PropsWithChildren) {
   const { current: initAuth } = useRef(checkTokenValidity());
   const [user, setUser] = useState(initAuth);
 
+  if (user) {
+    const token = getAccessToken();
+    setAxiosToken(token);
+  }
+
   const signIn = async (data: SignInRequest) => {
     const res = await postSignIn(data);
 
     if (res.status == 200) {
-      setAccessToken(res.data.token);
-      setUser(true);
+      signInWithToken(res.data.token);
     }
 
     return res;
@@ -36,7 +46,8 @@ function AuthProvider({ children }: PropsWithChildren) {
   };
 
   const signOut = () => {
-    postSignOut();
+    removeAccessToken();
+    removeAxiosToken();
     setUser(false);
   };
 

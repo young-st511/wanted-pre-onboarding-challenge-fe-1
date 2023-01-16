@@ -15,3 +15,17 @@ export function showAxiosError(error: AxiosError<any, any>) {
   console.error(error);
   console.warn("ERROR_RES: ", error.response);
 }
+
+export function setAxiosToken(token: string) {
+  axios.defaults.headers.common["Authorization"] = token;
+
+  //! Test
+  console.log(axios.defaults.headers.common);
+}
+
+export function removeAxiosToken() {
+  delete axios.defaults.headers.common["Authorization"];
+
+  //! Test
+  console.log(axios.defaults.headers.common);
+}
