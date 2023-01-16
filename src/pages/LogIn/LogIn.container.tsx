@@ -9,9 +9,10 @@ function LogInContainer() {
 
   const { signIn } = useAuth();
 
-  const onSubmit: SubmitHandler<SignInRequest> = (data) => {
+  const onSubmit: SubmitHandler<SignInRequest> = async (data) => {
     console.log("login data", data);
-    signIn(data);
+    const res = await signIn(data);
+    console.log(res);
   };
 
   return (
