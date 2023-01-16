@@ -1,9 +1,3 @@
-type Props = {}
+import TodosContainer from "./Todos.container";
 
-function Todos({}: Props) {
-  return (
-    <div>Todos</div>
-  )
-}
-
-export default Todos
+export default TodosContainer;
