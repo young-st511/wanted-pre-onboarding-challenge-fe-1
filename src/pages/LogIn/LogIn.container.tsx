@@ -4,8 +4,7 @@ import useAuth from "../../hooks/auth/useAuth";
 import LogIn from "./LogIn.presenter";
 
 function LogInContainer() {
-  const { register, handleSubmit, formState, setValue } =
-    useForm<SignInRequest>();
+  const { register, handleSubmit, formState } = useForm<SignInRequest>();
 
   const { signIn } = useAuth();
 
