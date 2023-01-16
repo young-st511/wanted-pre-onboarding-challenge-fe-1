@@ -4,15 +4,22 @@ import { FormValidations } from "../../types/Form/FormPresenter.type";
 import SignUp from "./SignUp.presenter";
 import { useEffect } from "react";
 import { setAxiosDefaultsConfig } from "../../utils/axiosUtils";
+import { postSignUp } from "../../apis/signUp/signUpAPI";
+import useAuth from "../../hooks/auth/useAuth";
 
 function SignUpContainer() {
-  const { register, handleSubmit, formState, setValue } =
-    useForm<SignUpRequest>();
+  const { register, handleSubmit, formState } = useForm<SignUpRequest>();
 
-  const onSubmit: SubmitHandler<SignUpRequest> = (data) => {
+  const { signInWithToken } = useAuth();
+
+  const onSubmit: SubmitHandler<SignUpRequest> = async (data) => {
     delete data.passwordConfirm;
 
-    console.log("data", data);
+    const res = await postSignUp(data);
+
+    if ((res.status == 200 || res.status == 201) && res.data.token) {
+      signInWithToken(res.data.token);
+    }
   };
 
   useEffect(() => {

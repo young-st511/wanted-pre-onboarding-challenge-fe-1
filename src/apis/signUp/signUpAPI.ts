@@ -1,4 +1,4 @@
-import { postRequest } from "apis/requests";
+import { postRequest } from "../../apis/requests";
 import { SignUpApiUrl, SignUpRequest, SignUpResponse } from "./signUpAPI.type";
 
 export async function postSignUp(signUpFormData: SignUpRequest) {

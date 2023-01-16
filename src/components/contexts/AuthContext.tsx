@@ -9,6 +9,7 @@ interface AuthCtxType {
   signIn: (
     data: SignInRequest
   ) => Promise<AxiosResponse<SignInResponse, SignInRequest>>;
+  signInWithToken: (token: string) => void;
   signOut: () => void;
 }
 
@@ -29,12 +30,17 @@ function AuthProvider({ children }: PropsWithChildren) {
     return res;
   };
 
+  const signInWithToken = (token: string) => {
+    setAccessToken(token);
+    setUser(true);
+  };
+
   const signOut = () => {
     postSignOut();
   };
 
   return (
-    <AuthContext.Provider value={{ user, signIn, signOut }}>
+    <AuthContext.Provider value={{ user, signIn, signInWithToken, signOut }}>
       {children}
     </AuthContext.Provider>
   );
