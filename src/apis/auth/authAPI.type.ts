@@ -7,7 +7,7 @@ export const AuthApiUrl = {
 
 export interface SignInRequest {
   email: string;
-  pssword: string;
+  password: string;
 }
 
 export interface SignInResponse {

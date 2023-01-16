@@ -2,7 +2,7 @@ import { postSignIn, postSignOut } from "../../apis/auth/authAPI";
 import { SignInRequest, SignInResponse } from "../../apis/auth/authAPI.type";
 import { AxiosResponse } from "axios";
 import { createContext, PropsWithChildren, useRef, useState } from "react";
-import { checkTokenValidity } from "../../utils/tokenUtils";
+import { checkTokenValidity, setAccessToken } from "../../utils/tokenUtils";
 
 interface AuthCtxType {
   user: boolean;
@@ -22,6 +22,7 @@ function AuthProvider({ children }: PropsWithChildren) {
     const res = await postSignIn(data);
 
     if (res.status == 200) {
+      setAccessToken(res.data.token);
       setUser(true);
     }
 

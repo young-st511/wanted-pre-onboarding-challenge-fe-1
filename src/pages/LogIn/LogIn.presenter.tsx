@@ -1,11 +1,12 @@
-import { SignUpRequest } from "../../apis/signUp/signUpAPI.type";
+import { Link } from "react-router-dom";
+import { SignInRequest } from "../../apis/auth/authAPI.type";
 import FormInput from "../../components/widgets/form/Input";
-import * as S from "./SignUp.style";
 import { FormPresenter } from "../../types/Form/FormPresenter.type";
+import * as S from "./LogIn.style";
 
-type Props = FormPresenter<SignUpRequest>;
+type Props = FormPresenter<SignInRequest>;
 
-function SignUp({
+function LogIn({
   formState: { errors },
   onSubmit,
   handleSubmit,
@@ -13,7 +14,7 @@ function SignUp({
 }: Props) {
   return (
     <S.Wrapper>
-      <S.Title>{"Young's Todo 회원가입"}</S.Title>
+      <S.Title>{"Young's Todo에 오신 것을 환영합니다!"}</S.Title>
       <S.Form onSubmit={handleSubmit(onSubmit)}>
         <FormInput
           label="아이디(이메일)"
@@ -30,18 +31,11 @@ function SignUp({
           isError={!!errors.password}
           register={register}
         />
-        <FormInput
-          label="비밀번호 확인"
-          name="passwordConfirm"
-          type="password"
-          required
-          isError={!!errors.passwordConfirm}
-          register={register}
-        />
-        <S.Submit type="submit">가입하기</S.Submit>
+        <S.Submit type="submit">로그인</S.Submit>
       </S.Form>
+      <Link to="/signUp">회원가입!</Link>
     </S.Wrapper>
   );
 }
 
-export default SignUp;
+export default LogIn;
