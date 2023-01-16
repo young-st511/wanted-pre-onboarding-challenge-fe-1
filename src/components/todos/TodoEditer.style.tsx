@@ -3,7 +3,7 @@ import { StyledButton } from "../../components/styles/StyledButton";
 import StyledRootBox from "../../components/styles/StyledRootBox";
 
 export const Wrapper = styled(StyledRootBox)`
-  margin: 2.4rem auto;
+  margin: 1.2rem auto;
   padding: 2rem 1.2rem;
 `;
 
@@ -42,8 +42,8 @@ export const Input = styled.input`
     color: ${({ theme: { color } }) => color.gray2};
   }
 
+  box-shadow: inset 0 0 0.4rem rgba(100, 100, 100, 0.2);
   &:focus {
-    box-shadow: inset 0 0 0.4rem rgba(100, 100, 100, 0.4);
   }
 `;
 

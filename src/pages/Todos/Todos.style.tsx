@@ -4,7 +4,7 @@ import StyledRootBox from "../../components/styles/StyledRootBox";
 
 export const Wrapper = styled(StyledRootBox)`
   margin: 1.2rem auto;
-  padding: 2.4rem 2.4rem;
+  padding: 2rem 2.4rem;
 `;
 
 export const HeaderBox = styled.div`
@@ -18,6 +18,8 @@ export const RightBox = styled.div``;
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
+
+  margin-top: 3rem;
 `;
 
 export const Title = styled.h3`
@@ -26,7 +28,8 @@ export const Title = styled.h3`
 `;
 
 export const Contents = styled.p`
-  margin-top: 2rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.6rem;
 
   font-size: 1.6rem;
   font-weight: 500;
