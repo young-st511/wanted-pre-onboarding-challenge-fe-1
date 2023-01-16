@@ -4,6 +4,9 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import Router from "./Router";
 import "./assets/index.css";
 import { AuthProvider } from "./components/contexts/AuthContext";
+import { ThemeProvider } from "styled-components";
+import mainTheme from "./themes/mainTheme";
+import GlobalStyle from "./themes/GlobalStyle";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -17,7 +20,10 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <Router />
+        <ThemeProvider theme={mainTheme}>
+          <GlobalStyle />
+          <Router />
+        </ThemeProvider>
       </AuthProvider>
     </QueryClientProvider>
   </React.StrictMode>
