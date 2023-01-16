@@ -27,6 +27,7 @@ export const Title = styled.h1`
 export const LogOut = styled(StyledButton)`
   padding: 0.6rem 2rem;
 
+  background-color: ${({ theme: { color } }) => color.sub};
   border-radius: 0.8rem;
 
   font-size: 1.6rem;
