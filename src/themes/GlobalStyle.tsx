@@ -4,17 +4,17 @@ import reset from "styled-reset";
 const GlobalStyle = createGlobalStyle`
   ${reset}
   
-  div * {
-    font-family: SUIT;
-    font-weight: 400;
-    line-height: 2.4rem;
-    color: ${({ theme }) => theme.color.black};
-    font-size: 1.6rem;
-  }
-
   body {
     margin: 0;
-    background-color: ${({ theme }) => theme.color.white};
+    background-color: ${({ theme }) => theme.color.bgColor};
+
+    * {
+      font-family: SUIT;
+      font-weight: 400;
+      line-height: 2.4rem; 
+      color: ${({ theme }) => theme.color.black};
+      font-size: 1.6rem;
+    }
   }
 
   button, input {

@@ -1,8 +1,14 @@
-type Props = {}
+import { Outlet } from "react-router-dom";
+import useAuth from "../../hooks/auth/useAuth";
+import LogIn from "../LogIn";
 
-function Root({}: Props) {
+function Root() {
+  const isAuth = useAuth();
+
   return (
-    <div>Root</div>
+   <>
+    {isAuth ? <Outlet /> : <LogIn />}
+   </>
   )
 }
 
