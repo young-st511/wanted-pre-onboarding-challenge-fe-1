@@ -17,12 +17,18 @@ function TodoEditerPresenter({
     <S.Wrapper>
       <S.Form onSubmit={handleSubmit(onSubmit)}>
         <S.FormHeader>
-          <S.Input {...register("title")} autoComplete="off" tabIndex={1} />
+          <S.Input
+            {...register("title")}
+            autoComplete="off"
+            placeholder="할 일을 입력해주세요"
+            tabIndex={1}
+          />
           <S.Submit tabIndex={3}>{submitText}</S.Submit>
         </S.FormHeader>
         <S.ContentInput
           {...register("content")}
           autoComplete="off"
+          placeholder="할 일 내용"
           tabIndex={2}
         />
       </S.Form>

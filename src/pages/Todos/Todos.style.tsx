@@ -34,9 +34,11 @@ export const Contents = styled.p`
 
 export const ButtonBox = styled.div`
   display: flex;
+  gap: 0.4rem;
 `;
 
 export const Button = styled(StyledButton)`
+  flex-shrink: 0;
   padding: 0.6rem 1.2rem;
 
   border-radius: 0.8rem;

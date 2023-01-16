@@ -26,6 +26,7 @@ export const FormHeader = styled.div`
 export const Input = styled.input`
   flex: 1;
 
+  min-width: 100px;
   height: 100%;
 
   padding: 0 1.2rem;
@@ -59,6 +60,8 @@ export const ContentInput = styled(Input)`
 `;
 
 export const Submit = styled(StyledButton)`
+  flex: none;
+
   border-radius: 0.8rem;
   padding: 0.6rem 1.8rem;
 
