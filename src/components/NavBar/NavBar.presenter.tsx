@@ -6,7 +6,7 @@ interface Props {
 
 function NavBarPresenter({signOut}:Props) {
   return (
-    <S.Wrapper as={"nav"}>
+    <S.Wrapper>
       <S.Title>{"Young's TODO"}</S.Title>
       <S.LogOut onClick={signOut}>Log Out</S.LogOut>
     </S.Wrapper>

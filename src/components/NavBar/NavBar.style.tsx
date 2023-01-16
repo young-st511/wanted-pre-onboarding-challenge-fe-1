@@ -1,10 +1,22 @@
 import styled from "styled-components";
 import { StyledButton } from "../styles/StyledButton";
-import StyledRootBox from "../styles/StyledRootBox";
 
-export const Wrapper = styled(StyledRootBox)`
+export const Wrapper = styled.nav`
+  ${({ theme }) => theme.shadow.light};
+
+  position: sticky;
+  box-sizing: border-box;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  width: 100vw;
+  height: ${({ theme }) => theme.size.navHeight};
+
+  padding: 0 3.2rem;
+
+  background-color: ${({ theme: { color } }) => color.white};
 `;
 
 export const Title = styled.h1`
@@ -13,7 +25,10 @@ export const Title = styled.h1`
 `;
 
 export const LogOut = styled(StyledButton)`
-  padding: 1rem 1rem;
+  padding: 0.6rem 2rem;
+
+  border-radius: 0.8rem;
+
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 700;
 `;
