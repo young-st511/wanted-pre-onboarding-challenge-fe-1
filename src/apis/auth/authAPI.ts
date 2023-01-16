@@ -1,4 +1,5 @@
 import { postRequest } from "apis/requests";
+import { AuthKeys } from "hooks/queries/keys/AuthKeys";
 import { AuthApiUrl, SignInRequest, SignInResponse } from "./authAPI.type";
 
 export function postSignIn(data: SignInRequest) {
@@ -8,4 +9,8 @@ export function postSignIn(data: SignInRequest) {
   );
 
   return res;
+}
+
+export function postSignOut() {
+  localStorage.removeItem(AuthKeys.AccessToken);
 }
