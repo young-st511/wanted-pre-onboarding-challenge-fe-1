@@ -1,4 +1,4 @@
-import * as S from "../../../pages/Todos/Todos.style";
+import * as S from "./TodoCard.styled";
 import { TodoType } from "../../../types/todo/todo.type";
 
 interface Props {
@@ -9,16 +9,16 @@ interface Props {
 
 function TodoCardPresenter({ todo, clickDelete, clickEdit }: Props) {
   return (
-    <S.Wrapper>
+    <S.CardBox as={"article"}>
       <S.HeaderBox>
         <S.Title>{todo.title}</S.Title>
         <S.ButtonBox>
           <S.DeleteButton onClick={clickDelete}>삭제</S.DeleteButton>
-          <S.Button onClick={clickEdit}>수정</S.Button>
+          <S.EditButton onClick={clickEdit}>수정</S.EditButton>
         </S.ButtonBox>
       </S.HeaderBox>
       <S.Contents>{todo.content}</S.Contents>
-    </S.Wrapper>
+    </S.CardBox>
   );
 }
 

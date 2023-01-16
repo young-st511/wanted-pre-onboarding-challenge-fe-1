@@ -1,4 +1,3 @@
-import { List as StyledList } from "../../pages/Todos/Todos.style";
 import { TodoType } from "../../types/todo/todo.type";
 import TodoCard from "./todoCard";
 
@@ -8,13 +7,13 @@ interface Props {
 
 function TodosList({ todos }: Props) {
   return (
-    <StyledList>
+    <>
       {todos.map((todo) => (
         <li key={todo.id}>
           <TodoCard todo={todo} />
         </li>
       ))}
-    </StyledList>
+    </>
   );
 }
 

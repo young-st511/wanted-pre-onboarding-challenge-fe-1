@@ -5,6 +5,8 @@ export const Wrapper = styled.nav`
   ${({ theme }) => theme.shadow.light};
 
   position: sticky;
+  top: 0;
+
   box-sizing: border-box;
 
   display: flex;
@@ -17,6 +19,8 @@ export const Wrapper = styled.nav`
   padding: 0 3.2rem;
 
   background-color: ${({ theme: { color } }) => color.white};
+
+  z-index: 1000;
 `;
 
 export const Title = styled.h1`

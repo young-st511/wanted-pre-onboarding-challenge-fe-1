@@ -4,7 +4,7 @@ interface Props {
   signOut: VoidFunction;
 }
 
-function NavBarPresenter({signOut}:Props) {
+function NavBarPresenter({ signOut }: Props) {
   return (
     <S.Wrapper>
       <S.Title>{"Young's TODO"}</S.Title>
