@@ -1,14 +1,8 @@
-import { postSignIn, postSignOut } from "apis/auth/authAPI";
-import { SignInRequest, SignInResponse } from "apis/auth/authAPI.type";
+import { postSignIn, postSignOut } from "../../apis/auth/authAPI";
+import { SignInRequest, SignInResponse } from "../../apis/auth/authAPI.type";
 import { AxiosResponse } from "axios";
-import {
-  createContext,
-  PropsWithChildren,
-  useContext,
-  useRef,
-  useState,
-} from "react";
-import { checkTokenValidity } from "utils/tokenUtils";
+import { createContext, PropsWithChildren, useRef, useState } from "react";
+import { checkTokenValidity } from "../../utils/tokenUtils";
 
 interface AuthCtxType {
   user: boolean;
@@ -19,15 +13,6 @@ interface AuthCtxType {
 }
 
 const AuthContext = createContext<AuthCtxType | null>(null);
-
-const useAuth = () => {
-  const ctx = useContext(AuthContext);
-  if (!ctx) {
-    throw new Error("Auth Context Error");
-  }
-
-  return ctx;
-};
 
 function AuthProvider({ children }: PropsWithChildren) {
   const { current: initAuth } = useRef(checkTokenValidity());
@@ -54,4 +39,4 @@ function AuthProvider({ children }: PropsWithChildren) {
   );
 }
 
-export default { AuthProvider, useAuth };
+export { AuthProvider, AuthContext };

@@ -1,4 +1,4 @@
-import { AuthKeys } from "hooks/queries/keys/AuthKeys";
+import { AuthKeys } from "../hooks/queries/keys/AuthKeys";
 import jwtDecode from "jwt-decode";
 
 export type JWToken = string;
