@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import NavBar from "../../components/NavBar";
 import useAuth from "../../hooks/auth/useAuth";
 import { setAxiosDefaultsConfig } from "../../utils/axiosUtils";
 import LogIn from "../LogIn";
@@ -14,7 +15,12 @@ function Root() {
     return <LogIn />;
   }
 
-  return <Outlet />;
+  return (
+    <>
+      <NavBar />
+      <Outlet />
+    </>
+  );
 }
 
 export default Root;
