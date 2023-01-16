@@ -6,15 +6,14 @@ import { TodoKeys } from "../keys/TodoKeys";
 export function useTodoCreate() {
   const queryClient = useQueryClient();
   const mutation = useMutation(postTodo, {
-    onSuccess: ({ data }) => {
-      const todo = data.data;
-
-      console.log(data);
+    onSuccess: (todo) => {
+      console.log(todo);
 
       queryClient.setQueryData<TodoType[]>(TodoKeys.Todos, (todos) => {
         if (!todos) {
           return [todo];
         }
+        console.log("투두", todos);
         return [...todos, todo];
       });
     },

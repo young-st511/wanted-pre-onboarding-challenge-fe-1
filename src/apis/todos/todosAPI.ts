@@ -11,14 +11,14 @@ export async function getTodos() {
     T.TodosApiUrl.GET_TODOS
   );
 
-  return response;
+  return response.data.data;
 }
 export async function getTodoById(todoId: string) {
   const response = await getRequest<T.GetTodoByIdResponse>(
     T.TodosApiUrl.GET_TODO_BY_ID + todoId
   );
 
-  return response;
+  return response.data.data;
 }
 
 export async function postTodo(data: T.PostTodoRequest) {
@@ -27,7 +27,7 @@ export async function postTodo(data: T.PostTodoRequest) {
     data
   );
 
-  return response;
+  return response.data.data;
 }
 
 export async function updateTodo(todoId: string, data: T.UpdateTodoRequest) {
@@ -36,7 +36,7 @@ export async function updateTodo(todoId: string, data: T.UpdateTodoRequest) {
     data
   );
 
-  return response;
+  return response.data.data;
 }
 
 export async function deleteTodo(todoId: string) {
@@ -44,5 +44,5 @@ export async function deleteTodo(todoId: string) {
     T.TodosApiUrl.DELETE_TODO + todoId
   );
 
-  return response;
+  return response.data.data;
 }
