@@ -1,6 +1,8 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { UpdateTodoRequest } from "../../apis/todos/todosAPI.type";
-import { useTodoCreate } from "../../hooks/queries/todos/useTodoCreate";
+import { useTodoCreate } from "../../queries/useTodoCreate";
+import { UpdateTodoRequest } from "../../types/todosAPI.type";
+// import { UpdateTodoRequest } from "../../apis/todos/todosAPI.type";
+// import { useTodoCreate } from "../../hooks/queries/todos/useTodoCreate";
 import TodoEditerPresenter from "./TodoEditer.presenter";
 
 function TodoCreaterContainer() {

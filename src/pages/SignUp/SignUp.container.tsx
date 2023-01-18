@@ -1,10 +1,10 @@
-import { SignUpRequest } from "../../apis/signUp/signUpAPI.type";
+import { SignUpRequest } from "../../features/sign_up/api/signUpAPI.type";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { FormValidations } from "../../types/form/FormPresenter.type";
 import SignUp from "./SignUp.presenter";
 import { useEffect } from "react";
 import { setAxiosDefaultsConfig } from "../../utils/axiosUtils";
-import { postSignUp } from "../../apis/signUp/signUpAPI";
+import { postSignUp } from "../../features/sign_up/api/signUpAPI";
 import useAuth from "../../hooks/auth/useAuth";
 
 function SignUpContainer() {

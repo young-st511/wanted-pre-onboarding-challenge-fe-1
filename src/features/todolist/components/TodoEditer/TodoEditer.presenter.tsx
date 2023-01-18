@@ -1,6 +1,8 @@
-import { PostTodoRequest } from "../../apis/todos/todosAPI.type";
+// import { PostTodoRequest } from "../../apis/todos/todosAPI.type";
+// import { FormPresenter } from "../../types/form/FormPresenter.type";
+import { FormPresenter } from "../../../../types/form/FormPresenter.type";
+import { PostTodoRequest } from "../../types/todosAPI.type";
 import * as S from "./TodoEditer.style";
-import { FormPresenter } from "../../types/form/FormPresenter.type";
 
 interface Props extends FormPresenter<PostTodoRequest> {
   submitText: string;

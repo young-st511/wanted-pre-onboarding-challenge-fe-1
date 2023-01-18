@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "react-query";
 import Router from "./Router";
 import "./assets/index.css";
-import { AuthProvider } from "./components/contexts/AuthContext";
+import { AuthProvider } from "./contexts/AuthContext";
 import { ThemeProvider } from "styled-components";
 import mainTheme from "./themes/mainTheme";
 import GlobalStyle from "./themes/GlobalStyle";

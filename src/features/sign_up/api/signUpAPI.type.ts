@@ -1,4 +1,4 @@
-import { APIDomains } from "../apiDomains";
+import { APIDomains } from "../../../api/apiDomains";
 
 export const SignUpApiUrl = {
   /** POST: 회원가입 */

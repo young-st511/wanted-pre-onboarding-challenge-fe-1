@@ -1,4 +1,4 @@
-import { APIDomains } from "../apiDomains";
+import { APIDomains } from "../../../api/apiDomains";
 
 export const AuthApiUrl = {
   /** POST: 로그인 */

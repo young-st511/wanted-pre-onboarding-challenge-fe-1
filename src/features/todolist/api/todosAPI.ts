@@ -3,8 +3,8 @@ import {
   getRequest,
   postRequest,
   putRequest,
-} from "../../apis/requests";
-import * as T from "./todosAPI.type";
+} from "../../../api/requests";
+import * as T from "../types/todosAPI.type";
 
 export async function getTodos() {
   const response = await getRequest<T.GetTodosResponse>(

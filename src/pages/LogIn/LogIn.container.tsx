@@ -1,5 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { SignInRequest } from "../../apis/auth/authAPI.type";
+import { SignInRequest } from "../../features/auth/api/authAPI.type";
 import useAuth from "../../hooks/auth/useAuth";
 import LogIn from "./LogIn.presenter";
 

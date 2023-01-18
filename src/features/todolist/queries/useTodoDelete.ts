@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "react-query";
-import { deleteTodo as deleteTodoRequest } from "../../../apis/todos/todosAPI";
-import { TodoType } from "../../../types/todo/todo.type";
-import { TodoKeys } from "../keys/TodoKeys";
+import { deleteTodo as deleteTodoRequest } from "../../../features/todolist/api/todosAPI";
+import { TodoType } from "../types/todo.type";
+import { TodoKeys } from "./TodoQueryKeys";
 
 export function useTodoDelete(todoId: string) {
   const queryClient = useQueryClient();

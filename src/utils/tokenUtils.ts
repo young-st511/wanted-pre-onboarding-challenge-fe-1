@@ -1,4 +1,4 @@
-import { AuthKeys } from "../hooks/queries/keys/AuthKeys";
+import { AuthKeys } from "../features/todolist/api/AuthKeys";
 
 export type JWToken = string;
 

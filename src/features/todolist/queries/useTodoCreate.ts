@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "react-query";
-import { postTodo } from "../../../apis/todos/todosAPI";
-import { TodoType } from "../../../types/todo/todo.type";
-import { TodoKeys } from "../keys/TodoKeys";
+import { postTodo } from "../api/todosAPI";
+import { TodoType } from "../types/todo.type";
+import { TodoKeys } from "./TodoQueryKeys";
 
 export function useTodoCreate() {
   const queryClient = useQueryClient();
