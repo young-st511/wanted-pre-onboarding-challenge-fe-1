@@ -10,9 +10,7 @@ function Root() {
   const navigate = useRef(useNavigate());
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    setAxiosDefaultsConfig();
-  }, []);
+  setAxiosDefaultsConfig();
 
   useEffect(() => {
     if (user && pathname === "/") {
