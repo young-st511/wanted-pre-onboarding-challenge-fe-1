@@ -1,4 +1,4 @@
-import { postRequest } from "../../apis/requests";
+import { postRequest } from "../../../api/requests";
 import { AuthApiUrl, SignInRequest, SignInResponse } from "./authAPI.type";
 
 export function postSignIn(data: SignInRequest) {

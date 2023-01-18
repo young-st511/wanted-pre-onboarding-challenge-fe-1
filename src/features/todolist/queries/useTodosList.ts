@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
-import { getTodos } from "../../../apis/todos/todosAPI";
-import { TodoKeys } from "../keys/TodoKeys";
+import { getTodos } from "../../../features/todolist/api/todosAPI";
+import { TodoKeys } from "./TodoQueryKeys";
 
 export function useTodosList() {
   const query = useQuery(TodoKeys.Todos, getTodos);

@@ -1,6 +1,6 @@
-import { TodoCreater } from "../../components/todos";
-import TodosList from "../../components/todos/TodosList";
-import { TodoType } from "../../types/todo/todo.type";
+import { TodoCreater } from "../../features/todolist/components/TodoEditer";
+import TodosList from "../../features/todolist/components/TodosList";
+import { TodoType } from "../../features/todolist/types/todo.type";
 import * as S from "./Todos.style";
 interface Props {
   todos: TodoType[];

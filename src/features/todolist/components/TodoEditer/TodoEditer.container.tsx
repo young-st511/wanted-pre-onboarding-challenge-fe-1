@@ -1,8 +1,8 @@
 import { Dispatch, SetStateAction } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { PostTodoRequest } from "../../apis/todos/todosAPI.type";
-import { useTodoEdit } from "../../hooks/queries/todos/useTodoEdit";
-import { TodoType } from "../../types/todo/todo.type";
+import { useTodoEdit } from "../../queries/useTodoEdit";
+import { TodoType } from "../../types/todo.type";
+import { PostTodoRequest } from "../../types/todosAPI.type";
 import TodoEditerPresenter from "./TodoEditer.presenter";
 
 interface Props {

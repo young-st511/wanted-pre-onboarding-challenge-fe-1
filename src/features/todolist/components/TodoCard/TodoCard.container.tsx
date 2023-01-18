@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { TodoEditer } from "..";
-import { useTodoDelete } from "../../../hooks/queries/todos/useTodoDelete";
-import { TodoType } from "../../../types/todo/todo.type";
+import { TodoEditer } from "../TodoEditer";
+import { useTodoDelete } from "../../queries/useTodoDelete";
+import { TodoType } from "../../types/todo.type";
 import TodoCardPresenter from "./TodoCard.presenter";
 
 interface Props {

@@ -1,14 +1,17 @@
-import { postSignIn } from "../../apis/auth/authAPI";
-import { SignInRequest, SignInResponse } from "../../apis/auth/authAPI.type";
+import { postSignIn } from "../features/auth/api/authAPI";
 import { AxiosResponse } from "axios";
+import {
+  SignInRequest,
+  SignInResponse,
+} from "../features/auth/api/authAPI.type";
 import { createContext, PropsWithChildren, useRef, useState } from "react";
 import {
   checkTokenValidity,
   getAccessToken,
   removeAccessToken,
   setAccessToken,
-} from "../../utils/tokenUtils";
-import { removeAxiosToken, setAxiosToken } from "../../utils/axiosUtils";
+} from "../utils/tokenUtils";
+import { removeAxiosToken, setAxiosToken } from "../utils/axiosUtils";
 
 interface AuthCtxType {
   user: boolean;

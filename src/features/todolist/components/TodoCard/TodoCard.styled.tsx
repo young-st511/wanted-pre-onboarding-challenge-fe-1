@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { StyledButton } from "../../../components/styles/StyledButton";
-import StyledRootBox from "../../../components/styles/StyledRootBox";
+import { StyledButton } from "../../../../components/styles/StyledButton";
+import StyledRootBox from "../../../../components/styles/StyledRootBox";
 
 export const CardBox = styled(StyledRootBox)`
   margin: 1.2rem auto;

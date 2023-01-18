@@ -1,5 +1,5 @@
-import { TodoType } from "../../types/todo/todo.type";
-import { APIDomains } from "../apiDomains";
+import { APIDomains } from "../../../api/apiDomains";
+import { TodoType } from "./todo.type";
 
 export const TodosApiUrl = {
   /** GET: 모든 TODO 받아오기 */

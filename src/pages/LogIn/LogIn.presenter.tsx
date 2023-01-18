@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { SignInRequest } from "../../apis/auth/authAPI.type";
 import FormInput from "../../components/widgets/form/Input";
+import { SignInRequest } from "../../features/auth/api/authAPI.type";
 import { FormPresenter } from "../../types/form/FormPresenter.type";
 import * as S from "./LogIn.style";
 
