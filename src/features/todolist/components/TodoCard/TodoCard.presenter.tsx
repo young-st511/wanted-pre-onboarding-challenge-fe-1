@@ -1,4 +1,4 @@
-import * as S from "./TodoCard.styled";
+import * as S from "./TodoCard.style";
 import { TodoType } from "../../types/todo.type";
 
 interface Props {
