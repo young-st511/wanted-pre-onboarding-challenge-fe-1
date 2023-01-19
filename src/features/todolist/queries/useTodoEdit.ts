@@ -1,4 +1,4 @@
-import { useMutation, useQueryClient } from "react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { updateTodo } from "../../../features/todolist/api/todosAPI";
 import { TodoType } from "../types/todo.type";
 import { UpdateTodoRequest } from "../types/todosAPI.type";

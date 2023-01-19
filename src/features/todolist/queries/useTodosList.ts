@@ -1,4 +1,4 @@
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import { getTodos } from "../../../features/todolist/api/todosAPI";
 import { TodoKeys } from "./TodoQueryKeys";
 

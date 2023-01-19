@@ -1,5 +1,5 @@
-const enum AuthKeys {
-  AccessToken = "accessToken",
-}
+const AuthKeys = {
+  AccessToken: ["accessToken"],
+} as const;
 
 export { AuthKeys };
