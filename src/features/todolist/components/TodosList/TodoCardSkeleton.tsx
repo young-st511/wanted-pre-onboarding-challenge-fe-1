@@ -1,5 +1,5 @@
-import SkeletonBox from "../../../components/styles/SkeletonBox";
-import * as S from "./TodoCard/TodoCard.style";
+import SkeletonBox from "../../../../components/styles/SkeletonBox";
+import * as S from "../TodoCard/TodoCard.style";
 
 function TodoCardSkeletonList({ listNumber }: { listNumber: number }) {
   return (

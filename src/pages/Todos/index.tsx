@@ -1,3 +1,3 @@
-import TodosContainer from "./Todos.container";
+import Todos from "./Todos.container";
 
-export default TodosContainer;
+export default Todos;
