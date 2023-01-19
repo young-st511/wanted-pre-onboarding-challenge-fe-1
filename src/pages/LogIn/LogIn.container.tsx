@@ -1,17 +1,17 @@
 import { SubmitHandler, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { SignInRequest } from "../../features/auth/api/authAPI.type";
 import useAuth from "../../hooks/auth/useAuth";
 import LogIn from "./LogIn.presenter";
 
 function LogInContainer() {
   const { register, handleSubmit, formState } = useForm<SignInRequest>();
-
+  const navigate = useNavigate();
   const { signIn } = useAuth();
 
   const onSubmit: SubmitHandler<SignInRequest> = async (data) => {
-    console.log("login data", data);
-    const res = await signIn(data);
-    console.log(res);
+    await signIn(data);
+    navigate("/");
   };
 
   return (
