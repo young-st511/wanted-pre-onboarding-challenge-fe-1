@@ -12,7 +12,6 @@ const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       staleTime: Infinity,
-      suspense: true,
     },
   },
 });

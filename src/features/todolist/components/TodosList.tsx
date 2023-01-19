@@ -1,4 +1,4 @@
-import { TodoType } from "../../types/todo/todo.type";
+import { TodoType } from "../types/todo.type";
 import TodoCard from "./TodoCard";
 
 interface Props {
