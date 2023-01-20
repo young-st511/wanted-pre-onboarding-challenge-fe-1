@@ -87,16 +87,20 @@ function FormInput<TForm extends FieldValues>({
 - 에러 역시 FormInput widget에서 자체적으로 처리하게 하였습니다.
 
 ### 경계 없는 유저 경험
+
 **추가**
+
 ![추가](https://user-images.githubusercontent.com/56586322/213449232-9b5dd92a-05fc-4071-9d0c-673d913ce9c3.gif)
 
 **수정**
+
 ![수정](https://user-images.githubusercontent.com/56586322/213449415-4b6703dc-c157-4ca7-88e6-a41f13e71aba.gif)
 
 - Todo 추가 시 최대한 유저 경험에 경계가 없도록 UI를 동일하게 만들었습니다
-- 수정 버튼을 눌렀을 때 수정 폼으로 자연스럽게 넘어가도록 구현하였습니다.
+- 수정 버튼을 눌렀을 때 수정 폼으로 자연스럽게 넘어가도록 구현하였습니다.  
+  
+## Skeleton UI 적용
 
-**Skeleton UI 적용
 ![Skeleton UI](https://user-images.githubusercontent.com/56586322/213591700-67519a25-0502-4032-a450-e723038b8c86.gif)
 
 - React Suspense와 fallback으로 Skeleton UI를 적용하여 로딩 시에도 자연스럽게 넘어가게 하였습니다
