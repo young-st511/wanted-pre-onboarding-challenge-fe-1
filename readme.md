@@ -1,8 +1,12 @@
 # 원티드 CRUD 특강 TODO 프로젝트
 
-# Youngs Todo
+# Young's Todo
 - 심플한 UI와 경계 없는 UX를 목표로 하고 있습니다!
 - 새로운 기술을 익혔을 때의 테스트 배드도 겸하고 있습니다
+
+## 실행 방법
+최상위 경로로 이동 후 터미널에서
+`npx vite` 입력 후 실행
 
 ## 폴더 구조
 ```bash
@@ -92,14 +96,21 @@ function FormInput<TForm extends FieldValues>({
 - Todo 추가 시 최대한 유저 경험에 경계가 없도록 UI를 동일하게 만들었습니다
 - 수정 버튼을 눌렀을 때 수정 폼으로 자연스럽게 넘어가도록 구현하였습니다.
 
+**Skeleton UI 적용
+![Skeleton UI](https://user-images.githubusercontent.com/56586322/213591700-67519a25-0502-4032-a450-e723038b8c86.gif)
+
+- React Suspense와 fallback으로 Skeleton UI를 적용하여 로딩 시에도 자연스럽게 넘어가게 하였습니다
+- Skeleton UI에는 애니메이션을 추가하였습니다.
+
 ## 추가해야 할 사항
-### 진행 중
-- ReactQuery v4로 이동
-- Suspense 및 Skeleton UI 적용
+### 진행 완료
+- [x] ReactQuery v4로 이동
+- [x] Suspense 및 Skeleton UI 적용
 
 ### 진행 예정
 - 상세 정보 모달창 추가
 - Todo List에 완료 여부 추가 (BackEnd 공부 필요함)
 - Error Boundary 사용해보기
 - 수정 및 삭제 햄버거 메뉴로 
+
 
