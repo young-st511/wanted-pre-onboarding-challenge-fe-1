@@ -81,7 +81,7 @@ function FormInput<TForm extends FieldValues>({
       {error && <S.Error>{error}</S.Error>}
     </S.Label>
   );
-}s
+}
 ```
 - 폼 관련 컴포넌트들을 공통 widget으로 만들어 디자인적인 통일감을 높이고 향후 폼의 확장성을 높였습니다.
 - 에러 역시 FormInput widget에서 자체적으로 처리하게 하였습니다.
@@ -108,13 +108,13 @@ function FormInput<TForm extends FieldValues>({
 
 ## 추가해야 할 사항
 ### 진행 완료
-- [x] ReactQuery v4로 이동
-- [x] Suspense 및 Skeleton UI 적용
+- [x] ~~ReactQuery v4로 이동~~
+- [x] ~~Suspense 및 Skeleton UI 적용~~
 
 ### 진행 예정
-- 상세 정보 모달창 추가
-- Todo List에 완료 여부 추가 (BackEnd 공부 필요함)
-- Error Boundary 사용해보기
-- 수정 및 삭제 햄버거 메뉴로 
+- [ ] 상세 정보 모달창 추가
+- [ ] Todo List에 완료 여부 추가 (BackEnd 공부 필요함)
+- [ ] Error Boundary 사용해보기
+- [ ] 수정 및 삭제 햄버거 메뉴로 
 
 
