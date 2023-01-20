@@ -1,13 +1,15 @@
-import { useMutation, useQueryClient } from "react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { postTodo } from "../api/todosAPI";
 import { TodoType } from "../types/todo.type";
 import { TodoKeys } from "./TodoQueryKeys";
 
-export function useTodoCreate() {
+export function useTodoCreate(reset: VoidFunction) {
   const queryClient = useQueryClient();
   const mutation = useMutation(postTodo, {
     onSuccess: (todo) => {
+      //! TEST
       console.log(todo);
+      reset();
 
       queryClient.setQueryData<TodoType[]>(TodoKeys.Todos, (todos) => {
         if (!todos) {

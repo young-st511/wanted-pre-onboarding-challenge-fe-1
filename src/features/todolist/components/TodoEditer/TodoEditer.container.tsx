@@ -16,17 +16,19 @@ function TodoEditerContainer({ prevTodo, setIsEdit }: Props) {
   const { handleSubmit, formState, register } = useForm<PostTodoRequest>({
     defaultValues: { title: prevTodo.title, content: prevTodo.content },
   });
-  const { mutate, isSuccess } = useTodoEdit(todoId);
+  const isDirty = formState.isDirty;
+  const { mutate } = useTodoEdit(todoId, setIsEdit);
 
   const onSubmit: SubmitHandler<PostTodoRequest> = (data: PostTodoRequest) => {
+    if (!isDirty) {
+      setIsEdit(false);
+      return;
+    }
+
     //! TEST
     console.log("TODO EDIT", data);
     mutate(data);
   };
-
-  if (isSuccess) {
-    setIsEdit(false);
-  }
 
   const props = { handleSubmit, formState, register, onSubmit };
 

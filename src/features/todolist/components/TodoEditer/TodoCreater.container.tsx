@@ -1,24 +1,15 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useTodoCreate } from "../../queries/useTodoCreate";
-import { UpdateTodoRequest } from "../../types/todosAPI.type";
-// import { UpdateTodoRequest } from "../../apis/todos/todosAPI.type";
-// import { useTodoCreate } from "../../hooks/queries/todos/useTodoCreate";
+import { PostTodoRequest } from "../../types/todosAPI.type";
 import TodoEditerPresenter from "./TodoEditer.presenter";
 
 function TodoCreaterContainer() {
   const { handleSubmit, formState, register, reset } =
-    useForm<UpdateTodoRequest>();
-  const { mutate, isSuccess } = useTodoCreate();
+    useForm<PostTodoRequest>();
+  const { mutate } = useTodoCreate(reset);
 
-  const onSubmit: SubmitHandler<UpdateTodoRequest> = (
-    data: UpdateTodoRequest
-  ) => {
+  const onSubmit: SubmitHandler<PostTodoRequest> = (data: PostTodoRequest) => {
     mutate(data);
-    console.log(data);
-
-    if (isSuccess) {
-      reset();
-    }
   };
 
   const props = { handleSubmit, formState, register, onSubmit };
